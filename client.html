@@ -1,28 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <title>USA :.: Ciclo 3 - Reto 2 :.: G32</title>
-    <link rel="preload" href="/css/normalize.css" as="style">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="preload" href="/css/estilos.css" as="style">
-    <link href="/css/estilos.css" rel="stylesheet">
-
+    <title>G32_Reto 2</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script type="text/javascript" src="js/misFuncionesClient.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
+    <script type="text/javascript" src="js/Client.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="estilos.css" as="style">
+    <link href="estilos.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <!--
-        <h1 class="titulo">Universidad Sergio Arboledad ::. 
-            <span>Ciclo 3 - Reto 2</span> </h1>
-        -->
-    </header>
-
- 
 
 <div class="nav-bg">
     <nav class="navegacion-principal contenedor">
@@ -33,57 +19,23 @@
     </nav>
 </div>
 
-<!--
-    <img src="../Retos/img/Rental01.jpg"> 
--->
+<h1>Operaciones sobre base de datos</h1>
 
-
-<main class="contenedor sombra">
-    
-<!-- Sección Operaciones Clientes -->
 <section>
-    <h2 id=OperacionClient>Consultar Clientes</h2>
-
-    <form class="formulario">
-        <fieldset>
-            <legend>Consulta de Clientes Registrados</legend>
-
-            <div class="contenedor-campos">
-                <div class="campo">
-                    <label>ID</label>
-                    <input class="input-text" type="number" id="id" placeholder="ID">
-                </div>
-                <div class="campo">
-                    <label>Name</label>
-                    <input class="input-text" type="text" id="name" placeholder="NAME">
-                </div>
-                <div class="campo">
-                    <label>E-Mail</label>
-                    <input class="input-text" type="text" id="email" placeholder="E-MAIL">
-                </div>
-                <div class="campo">
-                    <label>Age</label>
-                    <input class="input-text" type="number" id="age" placeholder="AGE">
-                </div>
-            </div> <!-- .contenedor-campos -->
-
-            <button class="boton" onclick="consultarClientes()"> Consultar </button>
-            <button class="boton" onclick="guardarCliente()"> Guardar </button>
-            <button class="boton" onclick="editarCliente()"> Actualizar </button>
-        </fieldset> 
-    </form>
-    <div id="consultaClient"></div>
+    <div>
+        <input type="number" id="id" placeholder="ID">
+        <input type="text" id="name" placeholder="NAME">
+        <input type="text" id="email" placeholder="E-MAIL">
+        <input type="number" id="age" placeholder="AGE">
+    </div>
+    <div>
+        <button class="boton" onclick="consultarClientes()">Consultar</button>
+        <button class="boton" onclick="guardarCliente()">Guardar</button>
+        <button class="boton" onclick="editarCliente()">Actualizar</button>
+    </div>
+    <div id="resultado"></div>
 </section>
-<!-- Fin Sección Operaciones Clientes -->
-
-</main>
-
-<footer>
-<!--
-<p>Todos los derechos reservados. Grupo 2.</p>
--->
-</footer>
-
 </body>
+
 
 </html>
