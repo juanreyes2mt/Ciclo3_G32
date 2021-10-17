@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>USA :.: Ciclo 3 - Reto 2 :.: G32</title>
+    <link rel="preload" href="/css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="/css/estilos.css" as="style">
+    <link href="/css/estilos.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/misFuncionesBike.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+</head>
+<body>
+    <header>
+        <!--
+        <h1 class="titulo">Universidad Sergio Arboledad ::. 
+            <span>Ciclo 3 - Reto 2</span> </h1>
+        -->
+    </header>
+
+ 
+
+<div class="nav-bg">
+    <nav class="navegacion-principal contenedor">
+        <a href="index.html">Inicio</a>
+        <a href="bikes.html">Bicicletas</a>
+        <a href="client.html">Clientes</a>
+        <a href="message.html">Mensajes</a>
+    </nav>
+</div>
+
+<!--
+    <img src="../Retos/img/Rental01.jpg"> 
+-->
+
+
+<main class="contenedor sombra">
+    
+<!-- Sección Operaciones Bicicletas -->
+<section>
+    <h2 id=OperacionBike>Consultar Bicicletas</h2>
+
+    <form class="formulario">
+        <fieldset>
+            <legend>Consulta de modelos de bicicletas disponibles</legend>
+
+            <div class="contenedor-campos">
+                <div class="campo">
+                    <label>ID</label>
+                    <input class="input-text" type="number" id="id" placeholder="ID">
+                </div>
+                <div class="campo">
+                    <label>Brand</label>
+                    <input class="input-text" type="text" id="brand" placeholder="BRAND">
+                </div>
+                <div class="campo">
+                    <label>Model</label>
+                    <input class="input-text" type="number" id="model" placeholder="MODEL">
+                </div>
+                <div class="campo">
+                    <label>Category ID</label>
+                    <input class="input-text" type="number" id="category_id" placeholder="CATEGORY ID">
+                </div>
+                <div class="campo">
+                    <label>Name</label>
+                    <input class="input-text" type="text" id="name" placeholder="NAME">
+                </div>
+            </div> <!-- .contenedor-campos -->
+
+            <button class="boton" onclick="consultarBicicletas()"> Consultar </button>
+            <button class="boton" onclick="guardarBicicleta()"> Guardar </button>
+            <button class="boton" onclick="editarBicicleta()"> Actualizar </button>
+
+        </fieldset> 
+    </form>
+    <div id="consultaBike"></div>
+</section>
+<!-- Fin Sección Operaciones Bicicletas -->
+
+</main>
+
+<footer>
+<!--
+<p>Todos los derechos reservados. Grupo 2.</p>
+-->
+</footer>
+
+</body>
+
+
+</html>

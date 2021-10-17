@@ -273,5 +273,11 @@ h1,h2,h3{
     border-radius: .5rem;
 }
 
-
+.tabla {
+    background-color: var(--grisClaro);
+    width: min ( 60rem, 100%); /* utilizar el valor mas pequeño */
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+}
 
