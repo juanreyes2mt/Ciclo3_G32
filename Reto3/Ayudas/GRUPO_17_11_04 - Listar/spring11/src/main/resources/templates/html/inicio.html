@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<h1>PAGINA DE INICIO</h1>
+<br/>
+<br/>
+
+
+        <div th:if="${Planetas != null and !Planetas.empty}">
+
+            <h1>Lista de Planetas</h1>
+            <table>
+                <tr>
+                    <th>Codigo </th>
+                    <th>Nombre</th>
+                </tr>
+                <tr  th:each="registroPlaneta : ${Planetas}">
+                    <td th:text="${registroPlaneta.getCodigo()}"></td>
+                    <td th:text="${registroPlaneta.getNombre()}"></td>
+                </tr>
+            </table>
+        </div>
+        <div th:if="${Planetas == null or Planetas.empty}">
+            El universo colapso!
+        </div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<h1>PAGINA DE INICIO</h1>
+<br/>
+<br/>
+        <div>
+            <a th:href="@{/agregar}">Crear un Planeta</a>
+        </div>
+
+        <!-- version 8 -->
+        <div th:if="${Planetas != null and !Planetas.empty}">
+
+            <h1>Lista de Planetas</h1>
+            <table>
+                <tr>
+                    <th>Codigo </th>
+                    <th>Nombre</th>
+                    <th></th>
+                    <th></th>
+                    <th>Editar</th>
+                    <th></th>
+                    <th>Eliminar</th>
+                </tr>
+                <tr  th:each="registroPlaneta : ${Planetas}">
+                    <td th:text="${registroPlaneta.getCodigo()}"></td>
+                    <td th:text="${registroPlaneta.getNombre()}"></td>
+                    <td></td>
+                    <td></td>
+                    <td><a th:href="@{/editar/} + ${registroPlaneta.getCodigo()}"     th:text="EDITAR">   </a>  </td>
+                    <td></td>
+                    
+                    <!-- opcion 1  eliminar -->
+                    <td><a th:href="@{/eliminar/} + ${registroPlaneta.getCodigo()}"  th:text="ELIMINAR"> </a>  </td>
+                    <!-- opcion 2  eliminar -->
+                    <!-- <td><a th:href="@{/eliminar(codigo=${registroPlaneta.getCodigo()})}"  th:text="ELIMINAR"> </a>  </td> -->
+                                    
+                </tr>
+            </table>
+        </div>
+        <div th:if="${Planetas == null or Planetas.empty}">
+            El universo colapso!
+        </div>
+</body>
+</html>

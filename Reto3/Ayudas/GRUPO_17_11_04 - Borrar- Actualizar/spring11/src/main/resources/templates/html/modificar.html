@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmnls="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<h1>PAGINA DE MODIFICAR</h1>
+<br/>
+<br/>
+
+<div>
+    <a th:href="@{/}">Volver al Inicio </a>
+</div>
+
+  <!-- version 8 -->
+  <div>
+    <h1>MODIFICAR UN PLANETA</h1>
+    <form th:action="@{/guardar}"    th:object="${planeta}"   method="post">
+        <label for="codigoPlaneta">Código Planeta</label>
+        <input type="number" name="codigoPlaneta" readonly="true" th:field="*{codigo}"/>
+
+        <label for="nombrePlaneta">Nombre Planeta</label>
+        <input type="text" name="nombrePlaneta" th:field="*{nombre}"/>
+
+        <br>
+        <br>
+        <input type="submit" value="Modificar">
+    </form>
+  </div>
+
+</body>
+</html>
