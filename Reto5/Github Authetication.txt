@@ -1,0 +1,13 @@
+Client ID
+7931d97b48c19a810424
+
+Client Secret
+8c18faa196b76b3ff7e7f7d3dcb14b71880e201f
+
+http://168.138.126.1:8080/
+http://168.138.126.1:8080/login/oauth2/code/github
+
+Client ID
+bcb540f13704732b9e8e
+
+7a4d85efc75fd011d5435ef41db57137c016700f
